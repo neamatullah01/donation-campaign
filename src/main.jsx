@@ -9,12 +9,15 @@ import MainLayout from './Layout/MainLayout';
 import Home from './Pages/Home/Home';
 import Donation from './Pages/Donation/Donation';
 import Statistics from './Pages/Statistics/Statistics';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import Details from './Components/Details/Details';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children : [
       {
         path : "/",
@@ -28,6 +31,11 @@ const router = createBrowserRouter([
       {
         path: "/statistics",
         element: <Statistics></Statistics>
+      },
+      {
+        path: "/details/:id",
+        element: <Details></Details>,
+        loader : () => fetch('/public/data.JSON')
       }
     ]
   },
