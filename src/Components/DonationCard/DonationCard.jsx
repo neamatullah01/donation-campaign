@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 const DonationCard = ({ data }) => {
 
@@ -26,5 +27,9 @@ const DonationCard = ({ data }) => {
         </div>
     );
 };
+
+DonationCard.propTypes ={
+    data: PropTypes.object
+}
 
 export default DonationCard;

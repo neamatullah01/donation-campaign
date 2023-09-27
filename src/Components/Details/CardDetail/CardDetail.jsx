@@ -1,4 +1,5 @@
 import swal from "sweetalert";
+import PropTypes from 'prop-types';
 
 
 const CardDetail = ({ detail }) => {
@@ -42,5 +43,9 @@ const CardDetail = ({ detail }) => {
         </div>
     );
 };
+
+CardDetail.propTypes ={
+    detail: PropTypes.object
+}
 
 export default CardDetail;
