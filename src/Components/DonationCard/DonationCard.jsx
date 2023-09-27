@@ -1,7 +1,7 @@
 
 const DonationCard = ({ data }) => {
 
-    const { id, picture, card_bg_color, category_bg_color, title, category, text_button_bg_color, description, price } = data;
+    const {picture, card_bg_color, category_bg_color, title, category, text_button_bg_color, price } = data;
     return (
         <div>
             <div style={{ backgroundColor: card_bg_color }} className="card lg:card-side bg-base-100 shadow-xl">
