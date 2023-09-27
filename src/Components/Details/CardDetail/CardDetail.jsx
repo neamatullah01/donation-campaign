@@ -19,15 +19,9 @@ const CardDetail = ({ detail }) => {
         else {
 
             const isExists = donationItems.find(donation => donation.id === id)
-
-            if (!isExists) {
                 addedDonationArray.push(...donationItems, detail)
                 localStorage.setItem('donation', JSON.stringify(addedDonationArray))
                 swal("Thank You!", "Your donation added!", "success");
-            }
-            else{
-                swal("Error!", "This donation already added!", "error");
-            }
 
         }
     }
